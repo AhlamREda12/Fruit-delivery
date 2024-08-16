@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="count.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="home">
+        <div class="inner">
+            <div class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <p>Food <br /> <span>Empire</span></p>
+                    </div>
+                    <div class="nav-link"><br />
+                        <ul>
+                            <li><a href="#">Favorite Fruits</a></li>
+                            <li><a href="#">Fruit Shoop</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#"><i class="fa" title="LogIn" >&#xf2f6</i></a></li>
+                            <li><a href="#"><i class="fa" title="Your Cart" >&#xf290</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="home-content">
+                <div class="container">
+                    <div class="sec1">
+                        <h4> 01<span>/02<br>Ananas</span></h4>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                    </div>
+                    <div class="sec2">
+                        <img src="imgs/Ananas2.png" alt="">
+                    </div>
+                    <div class="sec3">
+                        <h1>Fruit <sub>Fruit Mania</sub><br>Delivery</h1>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    </div>
+                </div>
+                <div class="social">
+                    <i class="fab instagram">&#xf16d</i>
+                    <i class="fab facebook">&#xf39e</i>
+                    <i class="fab xtwitter">&#xe61b</i>
+                </div>
+                <div class="carousel">
+                    <div class="item">
+                        <img src="imgs/s orange.jpg" alt="Oranges">
+                        <div class="info">
+                            <div class="info-flex">
+                                <div class="info-cap">
+                                    <h2>Orange</h2>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <p>Amet minim mollit non deserunt ullamco</p>
+                                </div>
+                                <div class="price">
+                                    <span class="new-price">39$</span>
+                                    <span class="old-price">59$</span>
+                                    <button class="buy-button">BUY NOW</button>
+                                </div>
+                            </div>
+                            <div class="pagination-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="imgs/watermelon.jpg" alt="">
+                        <div class="info">
+                            <div class="info-flex">
+                                <div class="info-cap">
+                                    <h2>Melons</h2>
+                                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                                    <p>Amet minim mollit non deserunt ullamco</p>
+                                </div>
+                                <div class="price">
+                                    <span class="new-price">49$</span>
+                                    <span class="old-price">59$</span>
+                                    <button class="buy-button">BUY NOW</button>
+                                </div>
+                            </div>
+                            <div class="pagination-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="favourites" >
+                <div class="childFavourites">
+                    <div class="fave">
+                      <h2>Favourite Fruits</h2></div>
+                    <button>
+                         More 
+                        <i class="fa">&#xf30b</i>
+                    </button>
+                </div>
+            </div>
+                <div class="line-one"></div>
+
+                <div class="favouriteFriut" id="favourite-shop">
+                    </div>
+                    <div class="child">
+                        <div class="fav">
+                          <h2>Fruit Shoop</h2></div>
+                          <button>
+                              More 
+                              <i class="fa">&#xf30b</i>
+                            </button>
+                        </div>
+                        <div class="line-two"></div>
+
+                    <div class="container" id="fruit-shop"> 
+                    </div>
+                    <div class="cards"></div>
+                    <div class="Titel-card"><h2>Add New Card</h2></div>
+                    <form id="addCardForm">
+                        <label for="fruitName">Fruit Name:</label>
+                        <input type="text" id="fruitName" name="fruitName" required>
+                        <br>
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" required>
+                        <br>
+                        <label for="originalPrice"> Price:</label>
+                        <input type="number" id="originalPrice" name="originalPrice" required>
+                        <br>
+                        <label for="discountedPrice">Discounted :</label>
+                        <input type="number" id="discountedPrice" name="discountedPrice" required>
+                        <br>
+                        <label for="imageUrl">Image URL:</label>
+                        <input type="text" id="imageUrl" name="imageUrl" required>
+                        <br>
+                        <button type="submit">Add Card</button>
+                    </form>
+
+                    <div class="Titel-card"><h2>Edit Card</h2></div>
+                    <form id="editCardForm" style="display:none;">
+                        <input type="hidden" id="editCardIndex">
+                        <label for="editFruitName">Fruit Name:</label>
+                        <input type="text" id="editFruitName" name="editFruitName" required>
+                        <br>
+                        <label for="editDescription">Description:</label>
+                        <input type="text" id="editDescription" name="editDescription" required>
+                        <br>
+                        <label for="editOriginalPrice">Original Price:</label>
+                        <input type="number" id="editOriginalPrice" name="editOriginalPrice" required>
+                        <br>
+                        <label for="editDiscountedPrice">Discounted Price:</label>
+                        <input type="number" id="editDiscountedPrice" name="editDiscountedPrice" required>
+                        <br>
+                        <label for="editImageUrl">Image URL:</label>
+                        <input type="text" id="editImageUrl" name="editImageUrl" required>
+                        <br>
+                        <button type="submit">Save Changes</button>
+                    </form>
+                    <section class="about" id="aboutpeople">
+                        <div class="header">
+                            <h2>About Us</h2>
+                            <div class="Rectangle">
+                                <i class="fa">&#xf060</i>          
+                                <i class="fa">&#xf061</i>
+                            </div>
+                        </div>
+                        <div class="people">
+                            <div class="card-info">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="imgs/maria.png" alt="">
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                    </div>
+                                </div>
+                                <p class="card-name">Maria</p>
+                                <p class="card-about">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            </div>
+                            <div class="card-info">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src= "imgs/anna.png" alt="Not Found!">
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                    </div>
+                                </div>
+                                <p class="card-name">Anna</p>
+                                <p class="card-about">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            </div>
+                            <div class="card-info">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="imgs/jessica.png" alt="Not Found!">
+                                    </div>
+                                    <div class="rate">
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                        <i class="fa">&#xf005</i>
+                                    </div>
+                                </div>
+                                <p class="card-name">Jessica</p>
+                                <p class="card-about">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <footer>
+                        <div class="card">
+                            <h2>Subscribe to newsletter</h2>
+                            <div class="card-content">
+                                <input type="text" placeholder="join" >
+                                <button>Subscribe</button>
+                            </div>
+                            <div class="sub-media">
+                               <p>Social Media</p>
+                                <i class="fab instagram">&#xf16d</i>
+                                <i class="fab xtwitter">&#xe61b</i>
+                                <i class="fab facebook">&#xf39e</i>
+                            </div>
+                        </div>
+                        <div class="company">
+                            <div class="logo">
+                                <h2>Food
+                                    <span>Empire</span>
+                                </h2>
+                            </div>
+                            <p>Dest Fruits</p>
+                            <p>Social Media</p>
+                            <p>More For You</p>
+                            <p>YourShop</p>
+                            <p>The Copyright 2022 guide covers 14 jurisdictions. </p>
+                            
+                        </div>
+                    </footer>
+                
+<script src="scripts.js"></script>
+
+</body>
+</html>
